@@ -62,7 +62,7 @@ const Import = (props) => {
             open={Boolean(anchorEl)}
             onClose={handleClose}>
                 <MenuItem onClick={handleClose}>
-                    <DeleteIcon onclick={props.deleteMake}/>
+                    <DeleteIcon onClick ={(idx) => props.deleteMake(idx)}/>
                 </MenuItem>  
             </Menu>
             </div>
