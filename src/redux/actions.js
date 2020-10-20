@@ -14,7 +14,7 @@ export const removeCar = (index) => {
     }
 }
 
-export const fetchMakes = () =>{
+export const fetchMakes = () => {
     return (dispatch) => {
         fetch(url)
             .then(res => res.json())
@@ -25,5 +25,11 @@ export const fetchMakes = () =>{
                 }
                 dispatch(action)
             })
+    }
+}
+export const deleteMake = (idx) => {
+    return{
+        type: 'DELETE_MAKES',
+        value: idx
     }
 }
